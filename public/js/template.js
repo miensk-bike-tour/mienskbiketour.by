@@ -41,7 +41,12 @@ jQuery(function($) {
 
 
 
- $("#bike-navbar-collapse .navbar-nav li a").removeAttr("target");
+    $("#bike-navbar-collapse .navbar-nav li a").removeAttr("target");
+
+    $("#bike-navbar-collapse .navbar-nav li a").on("click",function(){
+        $('.navbar-header .navbar-toggle').click();
+    });
+
  /* =============== SHOW / HIDE GO TO TOP =============== */
 	/* Check to see if the window is top if not then display go top button */
 	$(window).scroll(function(){
