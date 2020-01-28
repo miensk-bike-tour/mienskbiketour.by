@@ -4869,9 +4869,10 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
     margin-right: 15px;
     margin-bottom: 8px;
     background-color: transparent;
-    background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
+    background: url("../img/icons/cross_simple.svg") no-repeat -150% 50% !important;
+    background-size: 20px 20px!important;
 }
 
 .navbar-toggle:focus {
@@ -4887,6 +4888,14 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
 
 .navbar-toggle .icon-bar + .icon-bar {
     margin-top: 4px;
+}
+
+.navbar-toggle:not(.collapsed){
+    background-position: 50% 50%!important;
+}
+
+.navbar-toggle:not(.collapsed) .icon-bar{
+    opacity:0;
 }
 
 .navbar-nav {
