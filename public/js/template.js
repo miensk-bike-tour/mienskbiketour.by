@@ -143,5 +143,16 @@ $(document).ready(function(){
     $(" #bike-ourTeam a").attr("target", "_blank");
     $("#footer .bike-menuItem li a").removeAttr( "target" );
 
+    
+    
+    // Add cross to navbar icon when menu is open
+    $('.navbar-toggle').click(function() {
+        $('.navbar-toggle').toggleClass('active');
+    });
 
 })
+
+
+
+
+

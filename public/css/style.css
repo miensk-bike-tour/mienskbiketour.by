@@ -10692,6 +10692,24 @@ ul li {
     box-shadow: 0 0 10px orangered;
 }
 
+
+
+/* Toggle cross  ---------------------- */
+
+#bike-navbar .navbar-toggle.active .icon-bar.icon-middle {
+    background: rgba(0, 0, 0, 0);
+}
+#bike-navbar .navbar-toggle.active .icon-bar.icon-top {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 60%;
+}
+#bike-navbar .navbar-toggle.active .icon-bar.icon-bottom {
+     transform: rotate(135deg);
+}
+
+
+
 @media (min-width: 767px) {
     .navbar-header {
         float: right !important;
