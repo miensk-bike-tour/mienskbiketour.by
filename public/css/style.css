@@ -12639,3 +12639,9 @@ ul li {
         height: 650px;
     }
 }
+
+.kyak_icon{
+    background: url(../img/icons/icon-kyak.png) no-repeat 0 0/contain;
+    width: 35px;
+    height: 35px;
+}
