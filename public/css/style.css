@@ -7621,7 +7621,7 @@ section {
     font-size: 5rem;
     color: #ffffff;
     background: rgba(16, 16, 16, 0.3);
-    padding: 27px 0;
+    padding: 27px 10px;
 }
 
 #bike-slider .bike-sectionHeading .bike-subHeading {
@@ -8682,7 +8682,6 @@ div.pp_default .pp_social {
 
 .slick-slide img {
     display: block;
-    min-height: 200px;
 }
 
 .slick-slide.slick-loading img {
@@ -8904,23 +8903,18 @@ div.pp_default .pp_social {
 
 .container.header-wrap {
     border-bottom: 8px solid #fab200;
-    min-height: 78px;
 }
 
 #bike-slider .bike-sectionHeading {
     position: absolute;
-    top: 0;
     left: 0;
     right: 0;
-    margin-top: 15%;
+    top: 50%;
+    transform: translate(0,-50%);
 }
 
 .slick-slide img {
     width: 100%;
-}
-
-#bike-slider {
-    max-height: 650px !important;
 }
 
 .slick-slide {
@@ -9589,11 +9583,6 @@ h4.bold {
 
 .tour-page-wrapper ul {
     margin-left: 20px;
-}
-
-.tour-page-wrapper #bike-slider {
-    position: absolute;
-    height: 650px;
 }
 
 .tour-title-over-slider, .full-tour-banner {
@@ -12192,7 +12181,7 @@ ul li {
 
 @media screen and (max-width: 1024px) {
     #bike-slider .bike-sectionHeading {
-        font-size: 3rem;
+        font-size: 40px;
     }
 }
 
@@ -12212,16 +12201,12 @@ ul li {
         margin-bottom: 15px;
     }
 
-    #bike-slider {
-        padding-top: 10px;
-    }
-
     #bike-slider .carousel-indicators {
         margin-top: 30px;
     }
 
     #bike-slider .bike-sectionHeading {
-        font-size: 3rem;
+        font-size: 30px;
     }
 
     #bike-slider .bike-sectionHeading .bike-subHeading {
@@ -12432,15 +12417,11 @@ ul li {
     }
 
     #bike-slider .bike-sectionHeading {
-        font-size: 45px;
+        font-size: 25px;
     }
 
     #bike-slider .bike-sectionHeading .bike-subHeading {
         font-size: 22px;
-    }
-
-    #bike-slider .carousel-inner {
-        height: 400px;
     }
 
     #bike-slider .carousel-indicators li .number {
@@ -12584,7 +12565,6 @@ ul li {
 
     .full-tour-banner .over .bg-dark {
         position: static;
-        background-color: transparent !important;
     }
 
     .full-tour-banner .over .bg-dark h1, .full-tour-banner .over .bg-dark h2, .full-tour-banner .over .bg-dark h3, .full-tour-banner .over .bg-dark h4 {
@@ -12640,11 +12620,7 @@ ul li {
     }
 }
 
-@media screen and (max-width: 540px) {
-    #bike-slider {
-        display: none !important;
-    }
-
+@media screen and (max-width: 768px) {
     .full-tour-banner {
         background: rgba(254, 167, 0, 0.9);
     }
@@ -12654,4 +12630,18 @@ ul li {
     .tour-page-wrapper .big {
         font-size: 2rem !important;
     }
+}
+
+
+@media screen and (min-width: 749px) {
+    .tour-page-wrapper #bike-slider {
+        position: absolute;
+        height: 650px;
+    }
+}
+
+.kyak_icon{
+    background: url(../img/icons/icon-kyak.png) no-repeat 0 0/contain;
+    width: 35px;
+    height: 35px;
 }
