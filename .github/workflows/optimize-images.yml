@@ -11,8 +11,6 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
-
-      # @see https://github.com/marketplace/actions/image-actions
       - name: Optimize Images
         uses: calibreapp/image-actions@master
         with:
@@ -21,3 +19,5 @@ jobs:
           pngQuality: "90"
           webpQuality: "90"
           ignorePaths: "node_modules/**,build"
+
+# see https://github.com/marketplace/actions/image-actions
