@@ -1,0 +1,24 @@
+name: Optimize images
+on:
+  push:
+    paths:
+      - '**.jpg'
+      - '**.png'
+      - '**.webp'
+jobs:
+  build:
+    name: calibreapp/image-actions
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Optimize Images
+        uses: calibreapp/image-actions@master
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          jpegQuality: "90"
+          pngQuality: "90"
+          webpQuality: "90"
+          ignorePaths: "node_modules/**,build"
+
+# see https://github.com/marketplace/actions/image-actions
