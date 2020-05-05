@@ -6,16 +6,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Copy code
-          uses: actions/checkout@v2.1.0
-          with:
-            fetch-depth: 2
+        uses: actions/checkout@v2.1.0
+        with:
+          fetch-depth: 2
 
       - name: Upload files by FTP
-          uses: SamKirkland/FTP-Deploy-Action@3.1.0
-          with:
-            ftp-server: ${{ secrets.FTP_SERVER }}
-            ftp-username: ${{ secrets.FTP_USERNAME }}
-            ftp-password: ${{ secrets.FTP_PASSWORD }}
-            local-dir: ./public
-            git-ftp-args: --remote-root=/www/mienskbiketour.by
-            # see docs: https://github.com/SamKirkland/FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@3.1.0
+        with:
+          ftp-server: ${{ secrets.FTP_SERVER }}
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./public
+          git-ftp-args: --remote-root=/www/mienskbiketour.by
+          # see docs: https://github.com/SamKirkland/FTP-Deploy-Action
