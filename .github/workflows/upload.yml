@@ -8,7 +8,7 @@ on:
       - '**.webp'
       - '**.ico'
       - '**.js'
-      - '**.css'
+      - '**.cssZ'
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
@@ -26,4 +26,5 @@ jobs:
           ftp-username: ${{ secrets.FTP_USERNAME }}
           ftp-password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./public
+          git-ftp-args: --remote-root=/www/mienskbiketour.by
           # see docs: https://github.com/SamKirkland/FTP-Deploy-Action
