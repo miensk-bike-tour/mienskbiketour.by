@@ -1,14 +1,6 @@
 name: Publish Website
 on:
-  push:
-    paths:
-      - '**.html'
-      - '**.jpg'
-      - '**.png'
-      - '**.webp'
-      - '**.ico'
-      - '**.js'
-      - '**.cssZ'
+  push
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
