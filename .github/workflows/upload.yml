@@ -14,9 +14,9 @@ jobs:
       - name: Upload files by FTP
         uses: sebastianpopp/ftp-action@releases/v2
         with:
-          ftp-server: ${{ secrets.FTP_SERVER }}
-          ftp-username: ${{ secrets.FTP_USERNAME }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          host: ${{ secrets.FTP_SERVER }}
+          user: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
           localDir: "public"
           remoteDir: "/www/mienskbiketour.by"
           # see docs: https://github.com/sebastianpopp/ftp-action
