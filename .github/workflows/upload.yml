@@ -17,6 +17,6 @@ jobs:
           ftp-server: ${{ secrets.FTP_SERVER }}
           ftp-username: ${{ secrets.FTP_USERNAME }}
           ftp-password: ${{ secrets.FTP_PASSWORD }}
-          localDir: ./public
-          remoteDir: /www/mienskbiketour.by
+          localDir: "public"
+          remoteDir: "/www/mienskbiketour.by"
           # see docs: https://github.com/sebastianpopp/ftp-action
