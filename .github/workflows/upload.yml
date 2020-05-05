@@ -5,7 +5,7 @@ jobs:
     name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps:
-      - name: Copy code
+      - name: Pull code from GitHub
         uses: actions/checkout@v2.1.0
         with:
           fetch-depth: 2
