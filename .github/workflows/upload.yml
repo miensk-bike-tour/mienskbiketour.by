@@ -5,16 +5,17 @@ jobs:
     name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - name: FTP-Deploy-Action
-        uses: SamKirkland/FTP-Deploy-Action@2.0.0
-        env:
-          FTP_SERVER: ${{ secrets.FTP_SERVER }}
-          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-          LOCAL_DIR: public
-          REMOTE_DIR: /www/mienskbiketour.by
-          ARGS: --delete
-          # --delete arg will delete files on the server if you've deleted them in git
+      - name: Copy code
+          uses: actions/checkout@v2.1.0
+          with:
+            fetch-depth: 2
 
-# see docs: https://github.com/SamKirkland/FTP-Deploy-Action
+      - name: Upload files by FTP
+          uses: SamKirkland/FTP-Deploy-Action@3.1.0
+          with:
+            ftp-server: ${{ secrets.FTP_SERVER }}
+            ftp-username: ${{ secrets.FTP_USERNAME }}
+            ftp-password: ${{ secrets.FTP_PASSWORD }}
+            local-dir: ./public
+            git-ftp-args: --remote-root=/www/mienskbiketour.by
+            # see docs: https://github.com/SamKirkland/FTP-Deploy-Action
