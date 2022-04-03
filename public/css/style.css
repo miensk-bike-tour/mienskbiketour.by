@@ -7336,7 +7336,8 @@ img.img-full-width {
 }
 
 .tripadviser.social {
-    padding-top: 3px;
+    margin: 5px;
+    padding: 0;
 }
 
 footer .bike-followUs .socialNetwork .bike-icon {
@@ -8435,6 +8436,10 @@ div.pp_default .pp_social {
 .languages-wrap img {
     width: 20px;
     height: 20px;
+}
+
+.lang-list > li {
+    padding-left: 12px;
 }
 
 .tours-all-page img {
