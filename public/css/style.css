@@ -7353,7 +7353,7 @@ footer .bike-followUs .socialNetwork .bike-icon {
     vertical-align: middle;
 }
 
-.facebook.social, .vk.social, .trip-adviser.social {
+.facebook.social, .telegram.social, .instagram.social, .vk.social, .trip-adviser.social {
     margin: 5px 5px;
     background: #bd7000;
     border-radius: 100%;
@@ -7372,7 +7372,7 @@ footer .bike-followUs .socialNetwork .bike-icon {
     font-size: 18px;
 }
 
-.facebook.social:hover, .vk.social:hover, .trip-adviser:hover {
+.facebook.social:hover, .telegram.social:hover, .instagram.social:hover, .vk.social:hover, .trip-adviser:hover {
     background: #bd7f08;
     cursor: pointer;
     border-bottom: none;
