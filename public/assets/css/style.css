@@ -8717,7 +8717,7 @@ div.pp_default .pp_social {
 
 /* Slider */
 .slick-loading .slick-list {
-    background: #ffffff url("./ajax-loader.gif") center center no-repeat;
+    background: #ffffff url("../img/ajax-loader.gif") center center no-repeat;
 }
 
 /* Icons */
@@ -9088,7 +9088,7 @@ div.pp_default .pp_social {
 
 /* Slider */
 .slick-loading .slick-list {
-    background: #ffffff url("./ajax-loader.gif") center center no-repeat;
+    background: #ffffff url("../img/ajax-loader.gif") center center no-repeat;
 }
 
 /* Icons */
