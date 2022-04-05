@@ -12385,6 +12385,7 @@ ul li {
 
     #bike-navbar .languages-wrap > li {
         padding-left: 0 !important;
+        background: transparent;
     }
 }
 
