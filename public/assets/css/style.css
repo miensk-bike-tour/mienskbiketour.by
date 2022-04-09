@@ -1,8 +1,6 @@
 @charset "UTF-8";
-@import "https://fonts.googleapis.com/css?family=Roboto:400,700";
 @import "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700";
 @import "https://fonts.googleapis.com/css?family=Kaushan+Script";
-@import "https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/fonts/Material-Design-Iconic-Font.woff";
 
 .mCustomScrollbar {
     -ms-touch-action: pinch-zoom;
