@@ -1,19 +1,24 @@
 name: Optimize images
+
 on:
+  workflow_dispatch:
   pull_request:
     paths:
       - '**.jpg'
+      - '**.jpeg'
       - '**.png'
       - '**.webp'
 jobs:
-  build:
+  compress:
     name: calibreapp/image-actions
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
+
       - name: Optimize Images
-        uses: calibreapp/image-actions@master
+        id: calibre
+        uses: calibreapp/image-actions@main
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           jpegQuality: "90"
@@ -21,4 +26,13 @@ jobs:
           webpQuality: "90"
           ignorePaths: "node_modules/**,build"
 
-# see https://github.com/marketplace/actions/image-actions
+      - name: Create New Pull Request If Needed
+        if: steps.calibre.outputs.markdown != ''
+        uses: peter-evans/create-pull-request@v4
+        with:
+            title: Compressed raster images
+            branch: compress-raster-images
+            branch-suffix: timestamp
+            base: ${{ github.head_ref }}
+            commit-message: "#18182 🪄️ Compress raster images"
+            body: ${{ steps.calibre.outputs.markdown }}
