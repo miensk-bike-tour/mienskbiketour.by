@@ -1,6 +1,9 @@
 name: Publish Website
+
 on:
   push
+  workflow_dispatch
+
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
@@ -12,11 +15,11 @@ jobs:
           fetch-depth: 2
 
       - name: Upload files by FTP
-        uses: sebastianpopp/ftp-action@releases/v2
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          host: ${{ secrets.FTP_SERVER }}
-          user: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          localDir: "public"
-          remoteDir: "/www/mienskbiketour.by"
-          # see docs: https://github.com/sebastianpopp/ftp-action
+            server: ${{ secrets.FTP_SERVER }}
+            username: ${{ secrets.FTP_USERNAME }}
+            password: ${{ secrets.FTP_PASSWORD }}
+            local-dir: "./public/"
+            server-dir: "/www/mienskbiketour.by/"
+            # see docs: https://github.com/marketplace/actions/ftp-deploy
