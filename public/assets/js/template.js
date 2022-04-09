@@ -29,7 +29,7 @@ jQuery(function ($) {
 
     /* =============== ISOTOP =============== */
     $(window).load(function () {
-        $portfolio = $('.bike-portfolioItems');
+        var $portfolio = $('.bike-portfolioItems');
         $portfolio.isotope({
             itemSelector: 'li',
             layoutMode: 'masonry'
@@ -134,15 +134,8 @@ $(document).ready(function () {
         window.location = this.href;
 
     });
-    //     $('html, body').animate({
-    //         'scrollTop': this.offset().top
-    //
-    // }, 500, 'swing', function () {
-    //         window.location = this.href;
-    //     });
+
     $('.social a').attr("target", "_blank");
-    $(" #bike-ourTeam a").attr("target", "_blank");
+    $("#bike-ourTeam a").attr("target", "_blank");
     $("#footer .bike-menuItem li a").removeAttr("target");
-
-
 })
