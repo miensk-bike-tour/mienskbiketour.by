@@ -10,17 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Pull code from GitHub
-        uses: actions/checkout@v2.1.0
-        with:
-          fetch-depth: 2
+        uses: actions/checkout@v3
 
       - name: Upload files by FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        uses: sebastianpopp/ftp-action@releases/v2
         with:
-            server: ${{ secrets.FTP_SERVER }}
-            username: ${{ secrets.FTP_USERNAME }}
+            host: ${{ secrets.FTP_SERVER }}
+            user: ${{ secrets.FTP_USERNAME }}
             password: ${{ secrets.FTP_PASSWORD }}
-            local-dir: "./public/"
-            server-dir: "/www/mienskbiketour.by/"
-            log-level: "verbose"
-            # see docs: https://github.com/marketplace/actions/ftp-deploy
+            localDir: "public"
+            remoteDir: "/www/mienskbiketour.by"
+            # see docs: https://github.com/sebastianpopp/ftp-action
