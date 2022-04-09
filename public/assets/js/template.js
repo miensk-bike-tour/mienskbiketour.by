@@ -119,7 +119,7 @@ jQuery(function($) {
 
 
 $(document).ready(function(){
-    $("#book-menu,#book-now").on("click",function(){
+    $("#book-menu,#book-now, .book-now").on("click",function(){
     	$("#accordion-book .panel-heading .collapsed").trigger( "click" )
 	});
 
@@ -127,7 +127,7 @@ $(document).ready(function(){
         $("#nearestID").trigger( "click" );
     });
 
-    /* =============== SMOOTH SCROOL EFFECT =============== */
+    /* =============== SMOOTH SCROLL EFFECT =============== */
     $('.bike-menuItem ul li a:not(.link-to-page), #footer ul li a').on('click',function (e) {
         e.preventDefault();
         window.location = this.href;
