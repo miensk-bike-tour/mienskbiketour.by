@@ -1,13 +1,21 @@
 name: Publish Website
 
 on:
-  push:
   workflow_dispatch:
+  push:
+    paths:
+      - '**.html'
+      - '**.js'
+      - '**.css'
+      - '**.jpg'
+      - '**.png'
+      - '**.svg'
 
 jobs:
   deploy:
     name: 'Deploy by FTP'
     runs-on: ubuntu-latest
+    concurrency: deploy-mienskbiketour
     steps:
       - name: Pull code from GitHub
         uses: actions/checkout@v3
