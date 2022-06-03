@@ -5,8 +5,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  FTP-Deploy-Action:
-    name: FTP-Deploy-Action
+  deploy:
+    name: 'Deploy by FTP'
     runs-on: ubuntu-latest
     steps:
       - name: Pull code from GitHub
@@ -21,3 +21,4 @@ jobs:
             localDir: "public"
             remoteDir: "/www/mienskbiketour.by"
             # see docs: https://github.com/sebastianpopp/ftp-action
+            # secrets:: https://github.com/miensk-bike-tour/mienskbiketour.by/settings/secrets/actions
