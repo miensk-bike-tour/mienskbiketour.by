@@ -16,7 +16,7 @@ jobs:
       - name: Upload files by FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-            FTP_SERVER: ${{ secrets.FTP_SERVER }}
+            server: ${{ secrets.FTP_SERVER }}
             username: ${{ secrets.FTP_USERNAME }}
             password: ${{ secrets.FTP_PASSWORD }}
             local-dir: "public"
