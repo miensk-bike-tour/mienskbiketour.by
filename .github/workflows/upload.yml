@@ -21,12 +21,10 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Upload files by FTP
-        uses: sebastianpopp/ftp-action@releases/v2
+        uses: SamKirkland/FTP-Deploy-Action@2.0.0
         with:
-            host: ${{ secrets.FTP_SERVER }}
-            user: ${{ secrets.FTP_USERNAME }}
-            password: ${{ secrets.FTP_PASSWORD }}
-            localDir: "public"
-            remoteDir: "/www/mienskbiketour.by"
-            # see docs: https://github.com/sebastianpopp/ftp-action
-            # secrets:: https://github.com/miensk-bike-tour/mienskbiketour.by/settings/secrets/actions
+            FTP_SERVER: ${{ secrets.FTP_SERVER }}
+            FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+            FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+            LOCAL_DIR: "public"
+            REMOTE_DIR: "/www/mienskbiketour.by"
